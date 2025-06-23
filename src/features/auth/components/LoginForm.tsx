@@ -3,15 +3,13 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { loginSchema } from '../validators/loginSchema'
 import type { LoginFormValues } from '../validators/loginSchema'
-import { login } from '@/store/authSlice'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'sonner'
-import { useAppDispatch, useAppSelector } from '@/hooks'
+import { useAuth } from '../hooks/useAuth'
 
 export const LoginForm = () => {
   const navigate = useNavigate()
-  const dispatch = useAppDispatch()
-  const { loading, isAuthenticated, error } = useAppSelector((state) => state.auth)
+  const { login, isAuthenticated, loading, error } = useAuth();
 
   const {
     register,
@@ -22,7 +20,7 @@ export const LoginForm = () => {
   })
 
   const onSubmit = async (data: LoginFormValues) => {
-    await dispatch(login(data))
+    await login(data)
   }
 
   useEffect(() => {
