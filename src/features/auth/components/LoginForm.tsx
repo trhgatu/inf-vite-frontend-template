@@ -29,7 +29,7 @@ export const LoginForm = () => {
     if (isAuthenticated) {
       navigate('/')
     }
-  }, [isAuthenticated])
+  }, [isAuthenticated, navigate])
 
   useEffect(() => {
     if (error) {
