@@ -5,6 +5,7 @@ import { AdminLayout, AuthLayout } from '@/layouts'
 // Import route modules
 import { dashboardRoutes } from '@/features/dashboard/routes/dashboard.route'
 import { authRoutes } from '@/features/auth/routes/auth.route'
+import { usersRoutes } from '@/features/users/routes/user.route'
 
 export const router = createBrowserRouter([
   {
@@ -19,6 +20,7 @@ export const router = createBrowserRouter([
     element: <AdminLayout />,
     children: [
       ...dashboardRoutes,
+      ...usersRoutes
     ],
   },
   {
