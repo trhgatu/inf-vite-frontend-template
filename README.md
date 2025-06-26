@@ -1,54 +1,100 @@
-# React + TypeScript + Vite
+# ⚡ trhgatu-inf-vite-frontend-template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <b>A modular, admin-first Vite + React + TypeScript template with modern folder structure, state management, auth flow, and CI/CD.</b>
+</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  <img src="https://img.shields.io/badge/Vite-5.0-purple?style=flat-square&logo=vite" />
+  <img src="https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-%23007ACC.svg?style=flat-square&logo=typescript" />
+  <img src="https://img.shields.io/badge/Redux_Toolkit-ready-764abc?style=flat-square&logo=redux" />
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🧠 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Vite 5** – Lightning-fast dev server
+- **React 18** – Functional component architecture
+- **TypeScript** – Safer, typed JS
+- **Redux Toolkit** – Global state handling
+- **Zod** – Schema validation
+- **Axios Instance** – Centralized API config
+- **CI/CD** – GitHub Actions enabled
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## 📁 Folder Structure
+
+```
+trhgatu-inf-vite-frontend-template/
+├── src/
+│   ├── features/         # Modular business logic (auth, users, dashboard, errors)
+│   ├── layouts/          # Shared layouts (admin, auth)
+│   ├── routes/           # App routing + guards
+│   ├── components/       # Reusable layout elements
+│   ├── hooks/            # Custom hooks
+│   ├── services/         # Axios instance
+│   ├── store/            # Redux slices
+│   └── types/            # Global types
+├── .github/workflows/ci.yml # GitHub Actions
+├── vite.config.ts        # Vite config
+├── .env.example          # Env template
+└── tsconfig.json + eslint + prettier
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Getting Started
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+git clone https://github.com/trhgatu/trhgatu-inf-vite-frontend-template.git
+cd trhgatu-inf-vite-frontend-template
+npm install
+npm run dev
 ```
+
+---
+
+## 🔐 Auth Flow
+
+- Login page at `/admin/login`
+- `AuthGate` + `ProtectedRoute` for route protection
+- Restore auth state on refresh
+- Form validation with Zod
+
+---
+
+## 🧪 CI/CD – GitHub Actions
+
+Runs on push/pull to `main` branch:
+
+- ✅ Install deps
+- ✅ Lint
+- ✅ Format
+- ✅ Build Vite app
+
+---
+
+## 🧼 Code Style
+
+- ESLint + Prettier configured
+
+```bash
+npm run lint
+npm run format
+```
+
+---
+
+## 📜 License
+
+[MIT](./LICENSE)
+
+---
+
+## 🧙 Author
+
+Built with ❤️ by [Infinity (trhgatu)](https://github.com/trhgatu)  
+“Every layout, every route, every pixel – a reflection of the warrior within.”
