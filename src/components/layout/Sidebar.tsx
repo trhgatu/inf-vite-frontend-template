@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 const navItems = [
   { label: 'Dashboard', path: '/' },
   { label: 'Users', path: '/users' },
+  { label: 'Blogs', path: '/blogs' },
   // Add more as needed...
 ]
 
@@ -16,8 +17,7 @@ export const Sidebar = () => {
             key={item.path}
             to={item.path}
             className={({ isActive }) =>
-              `block px-3 py-2 rounded hover:bg-gray-100 ${
-                isActive ? 'bg-gray-100 font-semibold' : ''
+              `block px-3 py-2 rounded hover:bg-gray-100 ${isActive ? 'bg-gray-100 font-semibold' : ''
               }`
             }
           >
