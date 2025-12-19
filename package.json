@@ -13,7 +13,7 @@
     "@hookform/resolvers": "^5.1.1",
     "@reduxjs/toolkit": "^2.8.2",
     "@tailwindcss/vite": "^4.1.10",
-    "axios": "^1.10.0",
+    "axios": "^1.12.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-hook-form": "^7.58.1",
@@ -38,6 +38,6 @@
     "tsconfig-paths": "^4.2.0",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.30.1",
-    "vite": "^6.3.5"
+    "vite": "^6.4.1"
   }
 }
